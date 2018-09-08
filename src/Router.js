@@ -4,20 +4,24 @@ import App from './App'
 import Admin from './Admin'
 import Buttons from './pages/ui/Button'
 import Login from './pages/login/Login'
-import NotFound from './pages/notFound/NotFound';
+import NotFound from './pages/notFound/NotFound'
 export default class Router extends React.Component {
   render() {
     return (
       <HashRouter>
         <App>
-          
           <Route path="/login" component={Login} />
-          <Route path="/admin" render={() => 
-            <Admin>
-              <Route path='/admin/ui/buttons' component={Buttons}></Route>
-              <Route component={NotFound}></Route>
-            </Admin>
-          } />
+          <Route
+            path="/admin"
+            render={() => (
+              <Admin>
+                <Switch>
+                  <Route path="/admin/ui/buttons" component={Buttons} />
+                  <Route component={NotFound} />
+                </Switch>
+              </Admin>
+            )}
+          />
         </App>
       </HashRouter>
     )
