@@ -15,14 +15,14 @@ export default class Buttons extends React.Component {
   render() {
     return (
       <div>
-        <Card title="Type">
+        <Card title="Type" className="card-wrap">
           <Button type="prime">Button</Button>
           <Button>Button</Button>
           <Button type="dashed">Button</Button>
           <Button type="danger">Button</Button>
           <Button disabled>Button</Button>
         </Card>
-        <Card title="Icon">
+        <Card title="Icon" className="card-wrap">
           <Button icon="plus">Add</Button>
           <Button icon="edit">Edit</Button>
           <Button icon="delete">Delete</Button>
@@ -30,7 +30,7 @@ export default class Buttons extends React.Component {
           <Button shape="circle" icon="search" />
           <Button icon="download">Download</Button>
         </Card>
-        <Card title="Loading">
+        <Card title="Loading" className="card-wrap">
           <Button type="primary" loading={true}>
             Confirm
           </Button>
@@ -45,7 +45,7 @@ export default class Buttons extends React.Component {
             Download
           </Button>
         </Card>
-        <Card title="Button Group">
+        <Card title="Button Group" className="card-wrap">
           <Button.Group className="btn-group">
             <Button icon="left" type="primary">
               Previous
@@ -56,7 +56,7 @@ export default class Buttons extends React.Component {
             </Button>
           </Button.Group>
         </Card>
-        <Card title="Button Size">
+        <Card title="Button Size" className="card-wrap">
           <Radio.Group onChange={this.handleButtonSizeChange}>
             <Radio value="large">Large</Radio>
             <Radio value="default">Medium</Radio>
