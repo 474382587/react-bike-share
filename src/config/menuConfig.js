@@ -1,6 +1,6 @@
 const menuList = [
   {
-    title: '首页',
+    title: 'Home',
     key: '/home'
   },
   {
@@ -42,30 +42,30 @@ const menuList = [
     ]
   },
   {
-    title: '表单',
+    title: 'Form',
     key: '/form',
     children: [
       {
-        title: '登录',
-        key: '/form/login'
+        title: 'Login Form',
+        key: '/admin/form/login'
       },
       {
-        title: '注册',
-        key: '/form/reg'
+        title: 'Register Form',
+        key: '/admin/form/reg'
       }
     ]
   },
   {
-    title: '表格',
+    title: 'Table',
     key: '/table',
     children: [
       {
-        title: '基础表格',
-        key: '/table/basic'
+        title: 'Basic Table',
+        key: '/admin/table/basic'
       },
       {
-        title: '高级表格',
-        key: '/table/high'
+        title: 'Advanced Table',
+        key: '/admin/table/high'
       }
     ]
   },

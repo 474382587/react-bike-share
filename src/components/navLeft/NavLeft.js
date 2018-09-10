@@ -40,10 +40,10 @@ export default class NavLeft extends React.Component {
           <h1>CMS</h1>
         </div>
         <Menu theme="dark">
-          <Menu.Item>菜单项</Menu.Item>
           {this.state.menuTreeNode}
-          <SubMenu title="子菜单">
-            <Menu.Item>子菜单项</Menu.Item>
+          <Menu.Item>Menu Item</Menu.Item>
+          <SubMenu title="Sub Menu">
+            <Menu.Item>Sub Menu Item</Menu.Item>
           </SubMenu>
         </Menu>
       </div>

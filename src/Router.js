@@ -12,6 +12,8 @@ import GlobalMessage from './pages/ui/GlobalMessage/GlobalMessage';
 import Tab from './pages/ui/Tab/Tab';
 import Gallery from './pages/ui/Gallery/Gallery';
 import ImageCarousel from './pages/ui/Carousel/Carousel';
+import FormLogin from './pages/form/Login/Login';
+import FormRegister from './pages/form/Register/Register';
 export default class Router extends React.Component {
   render() {
     return (
@@ -31,6 +33,8 @@ export default class Router extends React.Component {
                   <Route path="/admin/ui/tabs" component={Tab} />
                   <Route path="/admin/ui/gallery" component={Gallery} />
                   <Route path="/admin/ui/carousel" component={ImageCarousel} />
+                  <Route path="/admin/form/login" component={FormLogin} />
+                  <Route path="/admin/form/reg" component={FormRegister} />
                   <Route component={NotFound} />
                 </Switch>
               </Admin>
