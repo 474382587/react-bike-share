@@ -8,11 +8,11 @@ const menuList = [
     key: '/ui',
     children: [
       {
-        title: '按钮',
+        title: 'Button',
         key: '/admin/ui/buttons'
       },
       {
-        title: '弹框',
+        title: 'Modal',
         key: '/admin/ui/modals'
       },
       {
@@ -20,23 +20,23 @@ const menuList = [
         key: '/admin/ui/loadings'
       },
       {
-        title: '通知提醒',
+        title: 'Notification',
         key: '/admin/ui/notification'
       },
       {
-        title: '全局Message',
+        title: 'Global Message',
         key: '/admin/ui/messages'
       },
       {
-        title: 'Tab页签',
+        title: 'Tabs',
         key: '/admin/ui/tabs'
       },
       {
-        title: '图片画廊',
+        title: 'Gallery',
         key: '/admin/ui/gallery'
       },
       {
-        title: '轮播图',
+        title: 'Carousel',
         key: '/admin/ui/carousel'
       }
     ]

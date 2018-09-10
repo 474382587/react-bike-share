@@ -8,6 +8,10 @@ import NotFound from './pages/notFound/NotFound'
 import Modals from './pages/ui/Modals/Modals';
 import Loading from './pages/ui/Loading/Loading';
 import Notification from './pages/ui/Notification/Notification';
+import GlobalMessage from './pages/ui/GlobalMessage/GlobalMessage';
+import Tab from './pages/ui/Tab/Tab';
+import Gallery from './pages/ui/Gallery/Gallery';
+import ImageCarousel from './pages/ui/Carousel/Carousel';
 export default class Router extends React.Component {
   render() {
     return (
@@ -23,6 +27,10 @@ export default class Router extends React.Component {
                   <Route path="/admin/ui/modals" component={Modals} />
                   <Route path="/admin/ui/loadings" component={Loading} />
                   <Route path="/admin/ui/notification" component={Notification} />
+                  <Route path="/admin/ui/messages" component={GlobalMessage} />
+                  <Route path="/admin/ui/tabs" component={Tab} />
+                  <Route path="/admin/ui/gallery" component={Gallery} />
+                  <Route path="/admin/ui/carousel" component={ImageCarousel} />
                   <Route component={NotFound} />
                 </Switch>
               </Admin>

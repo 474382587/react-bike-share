@@ -16,7 +16,7 @@ export default class Notifications extends React.Component {
   render() {
     return (
       <div>
-        <Card title="Notification">
+        <Card title="Notification" className="card-wrap">
           <Button
             type="primary"
             onClick={() => {
