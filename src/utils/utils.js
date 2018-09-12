@@ -17,5 +17,19 @@ export default {
       ':' +
       date.getSeconds()
     )
+  },
+  pagination(data, callback) {
+    let page = {
+      onChange: (current) => {
+        callback(current)
+      },
+      current: data.result.page,
+      pageSize: data.result.page_size,
+      total: data.result.total,
+      showTotal: () => {
+        return `${data.result.total} results in total`
+      },
+      showQuickJumper: true
+    }
   }
 }

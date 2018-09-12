@@ -59,7 +59,7 @@ export default class BasicTable extends React.Component {
     this.setState({ dataSource: data })
   }
   onRowClick = (record, index) => {
-    let selectKey = [index+1]
+    let selectKey = [index + 1]
     this.setState({ selectedRowKeys: selectKey, selectedItem: record })
   }
   render() {
@@ -72,20 +72,84 @@ export default class BasicTable extends React.Component {
       { title: 'Address', dataIndex: 'address' }
     ]
     const selectedRowKeys = this.state.selectedRowKeys
-    return <div>
+    const rowCheckSelection = {
+      type: 'checkbox',
+      selectedRowKeys,
+
+      onChange: (selectedRowKeys, selectedRows) => {
+        this.setState({ selectedRowKeys, selectedRows })
+      }
+    }
+    return (
+      <div>
         <Card title="Basic Table" className="card-wrap">
-          <Table rowKey={e => e.id} bordered pagination={false} dataSource={this.state.dataSource} columns={columns} />
+          <Table
+            rowKey={e => e.id}
+            bordered
+            pagination={false}
+            dataSource={this.state.dataSource}
+            columns={columns}
+          />
         </Card>
-        <Card title="Table with dynamic data from Easy Mock" className="card-wrap">
-          <Table rowKey={e => e.id} bordered pagination={false} dataSource={this.state.dynamicData} columns={columns} />
+        <Card
+          title="Table with dynamic data from Easy Mock"
+          className="card-wrap"
+        >
+          <Table
+            rowKey={e => e.id}
+            bordered
+            pagination={false}
+            dataSource={this.state.dynamicData}
+            columns={columns}
+          />
         </Card>
         <Card title="Table with Radio Button" className="card-wrap">
-        <Table rowSelection={{ type: 'radio', selectedRowKeys: selectedRowKeys }} onRow={(record, index) => {
-              return { onClick: () => {
+          <Table
+            rowSelection={{ type: 'radio', selectedRowKeys: selectedRowKeys }}
+            onRow={(record, index) => {
+              return {
+                onClick: () => {
                   this.onRowClick(record, index)
-                }, onMouseEnter: () => {} }
-            }} rowKey={e => e.id} bordered pagination={false} dataSource={this.state.dynamicData} columns={columns} />
+                },
+                onMouseEnter: () => {}
+              }
+            }}
+            rowKey={e => e.id}
+            bordered
+            pagination={false}
+            dataSource={this.state.dynamicData}
+            columns={columns}
+          />
+        </Card>
+        <Card title="Table with Checkbox" className="card-wrap">
+          <Table
+            rowSelection={rowCheckSelection}
+            onRow={(record, index) => {
+              return {
+                onClick: () => {
+                  this.onRowClick(record, index)
+                },
+                onMouseEnter: () => {}
+              }
+            }}
+            rowKey={e => e.id}
+            bordered
+            pagination={false}
+            dataSource={this.state.dynamicData}
+            columns={columns}
+          />
+        </Card>
+
+        <Card title="Table with Pagination" className="card-wrap">
+          <Table
+            rowKey={e => e.id}
+            bordered
+            pagination={true}
+            dataSource={this.state.dynamicData}
+            columns={columns}
+          />
         </Card>
       </div>
+    )
   }
 }
